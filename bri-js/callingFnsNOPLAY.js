@@ -48,251 +48,233 @@ sidebarContentController("story-slide");
 let dataT = [];
 
 /* PM LAYERS */
-var layerPM_2010 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2010_E_I.png", bounds, {
+var layerPM_2010 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/PM_2010_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2010"
 });
 
-var layerPM_2011 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2011_E_I.png", bounds, {
+var layerPM_2011 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/PM_2011_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2011"
 });
 
-var layerPM_2012 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2012_E_I.png", bounds, {
+var layerPM_2012 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/PM_2012_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2012"
 });
 
-var layerPM_2013 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2013_E_I.png", bounds, {
+var layerPM_2013 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/PM_2013_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2013"
 });
 
-var layerPM_2014 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2014_E_I.png", bounds, {
+var layerPM_2014 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/PM_2014_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2014"
 });
 
-var layerPM_2015 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2015_E_I.png", bounds, {
+var layerPM_2015 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/PM_2015_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2015"
 });
 
-var layerPM_2016 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2016_E_I.png", bounds, {
+var layerPM_2016 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/PM_2016_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2016"
 });
 
-var layerPM_2017 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2017_E_I.png", bounds, {
+var layerPM_2017 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/PM_2017_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2017"
 });
 
-var layerPM_2018 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2018_E_I.png", bounds, {
+var layerPM_2018 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/PM_2018_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2018"
 });
 
-var layerPM_2019 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2019_E_I.png", bounds, {
+var layerPM_2019 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/PM_2019_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2019"
 });
 
-/* OZONE LAYERS */ /*
-var layerOZONE_1990 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_1990.png", bounds, {
+/* OZONE LAYERS */ 
+var layerOZONE_1990 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_1990_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "1990"
 });
 
-var layerOZONE_1991 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_1991.png", bounds, {
+var layerOZONE_1991 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_1991_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "1991"
 });
 
-var layerOZONE_1992 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_1992.png", bounds, {
+var layerOZONE_1992 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_1992_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "1992"
 });
 
-var layerOZONE_1993 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_1993.png", bounds, {
+var layerOZONE_1993 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_1993_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "1993"
 });
 
-var layerOZONE_1994 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_1994.png", bounds, {
+var layerOZONE_1994 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_1994_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "1994"
 });
 
-var layerOZONE_1995 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_1995.png", bounds, {
+var layerOZONE_1995 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_1995_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "1995"
 });
 
-var layerOZONE_1996 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_1996.png", bounds, {
+var layerOZONE_1996 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_1996_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "1996"
 });
 
-var layerOZONE_1997 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_1997.png", bounds, {
+var layerOZONE_1997 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_1997_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "1997"
 });
 
-var layerOZONE_1998 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_1998.png", bounds, {
+var layerOZONE_1998 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_1998_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "1998"
 });
 
-var layerOZONE_1999 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_1999.png", bounds, {
+var layerOZONE_1999 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_1999_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "1999"
 });
 
-var layerOZONE_2000 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2000.png", bounds, {
+var layerOZONE_2000 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2000_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2000"
 });
 
-var layerOZONE_2001 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2001.png", bounds, {
+var layerOZONE_2001 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2001_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2001"
 });
 
-var layerOZONE_2002 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2002.png", bounds, {
+var layerOZONE_2002 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2002_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2002"
 });
 
-var layerOZONE_2003 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2003.png", bounds, {
+var layerOZONE_2003 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2003_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2003"
 });
 
-var layerOZONE_2004 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2004.png", bounds, {
+var layerOZONE_2004 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2004_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2004"
 });
 
-var layerOZONE_2005 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2005.png", bounds, {
+var layerOZONE_2005 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2005_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2005"
 });
 
-var layerOZONE_2006 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2006.png", bounds, {
+var layerOZONE_2006 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2006_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2006"
 });
 
-var layerOZONE_2007 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2007.png", bounds, {
+var layerOZONE_2007 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2007_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2007"
 });
 
-var layerOZONE_2008 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2008.png", bounds, {
+var layerOZONE_2008 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2008_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2008"
 });
 
-var layerOZONE_2009 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2009.png", bounds, {
+var layerOZONE_2009 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2009_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2009"
 });
 
-var layerOZONE_2010 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2010.png", bounds, {
+var layerOZONE_2010 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2010_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2010"
 });
 
-var layerOZONE_2011 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2011.png", bounds, {
+var layerOZONE_2011 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2011_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2011"
 });
 
-var layerOZONE_2012 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2012.png", bounds, {
+var layerOZONE_2012 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2012_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2012"
 });
 
-var layerOZONE_2013 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2013.png", bounds, {
+var layerOZONE_2013 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2013_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2013"
 });
 
-var layerOZONE_2014 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2014.png", bounds, {
+var layerOZONE_2014 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2014_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2014"
 });
 
-var layerOZONE_2015 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2015.png", bounds, {
+var layerOZONE_2015 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2015_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2015"
 });
 
-var layerOZONE_2016 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2016.png", bounds, {
+var layerOZONE_2016 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2016_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2016"
 });
 
-var layerOZONE_2017 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2017.png", bounds, {
+var layerOZONE_2017 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/OZONE_2017_E_I.png", bounds, {
     opacity: 1.0,
     interactive: false,
     time: "2017"
-});
-
-var layerOZONE_2018 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2018.png", bounds, {
-    opacity: 1.0,
-    interactive: false,
-    time: "2018"
-});
-
-var layerOZONE_2019 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2019.png", bounds, {
-    opacity: 1.0,
-    interactive: false,
-    time: "2019"
-});
-
-var layerOZONE_2020 = new L.ImageOverlay("https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/OZONE_2020.png", bounds, {
-    opacity: 1.0,
-    interactive: false,
-    time: "2020"
 });
 
 /* NO2 LAYERS */ /*
@@ -480,15 +462,15 @@ var layerSOURCE_BIOFUEL = new L.ImageOverlay("https://raw.githubusercontent.com/
 
 /* make a layergroup for each type of pollution and then use checkies to decide which layergroup is shown */
 PMTFVP = L.layerGroup([layerPM_2010,layerPM_2011,layerPM_2012,layerPM_2013,layerPM_2014,layerPM_2015,layerPM_2016,layerPM_2017,layerPM_2018,layerPM_2019]);
-/*OZONEP = L.layerGroup([layerOZONE_1990,layerOZONE_1991,layerOZONE_1992,layerOZONE_1993,layerOZONE_1994,layerOZONE_1995,layerOZONE_1996,layerOZONE_1997,layerOZONE_1998,layerOZONE_1999,layerOZONE_2000,layerOZONE_2001,layerOZONE_2002,layerOZONE_2003,layerOZONE_2004,layerOZONE_2005,layerOZONE_2006,layerOZONE_2007,layerOZONE_2008,layerOZONE_2009,layerOZONE_2010,layerOZONE_2011,layerOZONE_2012,layerOZONE_2013,layerOZONE_2014,layerOZONE_2015,layerOZONE_2016,layerOZONE_2017,layerOZONE_2018,layerOZONE_2019,layerOZONE_2020]);
-NOTWOP = L.layerGroup([layerNO_1990,layerNO_1995,layerNO_2000,layerNO_2005,layerNO_2006,layerNO_2007,layerNO_2008,layerNO_2009,layerNO_2010,layerNO_2011,layerNO_2012,layerNO_2013,layerNO_2014,layerNO_2015,layerNO_2016,layerNO_2017,layerNO_2018,layerNO_2019,layerNO_2020]);
+OZONEP = L.layerGroup([layerOZONE_1990,layerOZONE_1991,layerOZONE_1992,layerOZONE_1993,layerOZONE_1994,layerOZONE_1995,layerOZONE_1996,layerOZONE_1997,layerOZONE_1998,layerOZONE_1999,layerOZONE_2000,layerOZONE_2001,layerOZONE_2002,layerOZONE_2003,layerOZONE_2004,layerOZONE_2005,layerOZONE_2006,layerOZONE_2007,layerOZONE_2008,layerOZONE_2009,layerOZONE_2010,layerOZONE_2011,layerOZONE_2012,layerOZONE_2013,layerOZONE_2014,layerOZONE_2015,layerOZONE_2016,layerOZONE_2017]);
+/*NOTWOP = L.layerGroup([layerNO_1990,layerNO_1995,layerNO_2000,layerNO_2005,layerNO_2006,layerNO_2007,layerNO_2008,layerNO_2009,layerNO_2010,layerNO_2011,layerNO_2012,layerNO_2013,layerNO_2014,layerNO_2015,layerNO_2016,layerNO_2017,layerNO_2018,layerNO_2019,layerNO_2020]);
 LIGHTP = L.layerGroup([layerLIGHT_2012,layerLIGHT_2013,layerLIGHT_2014,layerLIGHT_2015,layerLIGHT_2016,layerLIGHT_2017,layerLIGHT_2018,layerLIGHT_2019,layerLIGHT_2020,layerLIGHT_2021]); 
 SOURCEP = L.layerGroup([layerSOURCE_BIOFUEL]);*/
 
 const picsvars = {
   PMTFV: PMTFVP,
-/*  OZONE: OZONEP,
-  NOTWO: NOTWOP,
+  OZONE: OZONEP,
+/*  NOTWO: NOTWOP,
   LIGHT: LIGHTP,
   SOURCE: SOURCEP,*/
 };
@@ -646,7 +628,7 @@ legend.onAdd = function (map) {
 var div = L.DomUtil.create('div', 'info legend');
 
     div.innerHTML +=
-    '<img src="UK_IRELAND/trash.png" alt="legend" width="33" height="80">';
+    '<img src="trash.png" alt="legend" width="33" height="80">';
 
 return div;
 };

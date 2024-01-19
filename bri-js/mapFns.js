@@ -4,10 +4,10 @@ dataT, showmeHistogram, addHistInput, checkies, showdown */
 let dlist;
 /* === MY DATA ON GITHUB === */
 const mapvars = {
-  PMTFV: "https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/PM_2010_E_I.png",
-  OZONE: "https://raw.githubusercontent.com/aidanpcole/UK_IRELAND/main/UK_IRELAND/data/DataForMap/",
-  NOTWO: "https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/no2_quants.geojson",
-  LIGHT: "https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/light_quants.geojson",
+  PMTFV: "https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/UK_IRELAND_simple.geojson",
+  OZONE: "https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/UK_IRELAND_simple.geojson",
+  NOTWO: "https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/UK_IRELAND_simple.geojson",
+  LIGHT: "https://raw.githubusercontent.com/aidanpcole/EXPOSOME_IRELAND_UK/main/data/DataForMap/UK_IRELAND_simple.geojson",
   SOURCE: "https://raw.githubusercontent.com/aidanpcole/EXPOSOMEDASHBOARD/main/data/DataForMap/pm25_quants.geojson"
 };
 
@@ -102,8 +102,8 @@ const bindingsvars = {
 
 
 
-/// .addTo(map) used to be .addTo(layerGroup)
-function updateMap(url, styleType, bindings) {
+/// .addTo(map) used to be .addTo(layerGroup) used to have ", bindings" after styleType 
+function updateMap(url, styleType) {
 			map.eachLayer(function(layer) {
   	if (!!layer.toGeoJSON) {
     map.removeLayer(layer);
@@ -115,7 +115,7 @@ function updateMap(url, styleType, bindings) {
       dlist = data;
       L.geoJSON(data, {
         style: styleType,
-        onEachFeature: bindings
+///use to have onEachFeature: bindings here 
       }).addTo(map);
     });
 }
@@ -125,9 +125,9 @@ function updateMap(url, styleType, bindings) {
 
 
 
-function initializeMap() {
+function initializeMap() { 
   console.log("INITIALIZEMAP FN");
-/*  updateMap(mapvars.PMTFV, stylevars.PMTFV, onEachFeaturePMTFV); */
+  updateMap(mapvars.PMTFV, stylevars.PMTFV); /// used to have ", onEachFeaturePMTFV" after stylevars.PMTFV
   sidebarContentController("filter-slide");
 }
 
@@ -171,7 +171,7 @@ function determineMap() {
 //      updateMappointPCH(mapvars[name], name, emptyCallback);
 //    }
     if (polygonLayers.includes(name)) {
-      //updateMap(mapvars[name], stylevars[name], bindingsvars[name]);
+      updateMap(mapvars[name], stylevars[name]);   /// used to have ", bindingsvars[name]" after stylevars[name]
     }
   });
 }
