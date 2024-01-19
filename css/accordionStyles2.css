@@ -1,0 +1,602 @@
+/*Trying to Build a Foldable Table in Vanilla JS*/
+/*start with accordion, item?, and heading, and button*/
+
+.accordion {
+    background-color: whitesmoke;
+  }
+  
+.accordion-heading{
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+
+.accordion-trigger{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  position: relative;
+  font-size: inherit;
+  background-color: whitesmoke;
+  color: #1f1f1f;
+  border-top: 0.5rem solid #08415C;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-left: transparent;
+}
+
+.accordion-trigger::after {
+  content: "";
+  position: absolute;
+  right: 100px;
+  top: calc(50% - 5px);
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid #08415C;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.5s;
+  background: whitesmoke;
+}
+.accordion-trigger[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+  margin-left: 100px;
+}
+.accordion-trigger:hover {
+  background: rgb(209, 209, 209);
+}
+
+.accordion-copy{
+  overflow: hidden;
+  padding: 0 1.5rem 0 1.5rem;
+  color: #1f1f1f;
+  visibility: hidden;
+  transition: visibility 0.5s, padding 0.5s, max-height 0.5s;
+}
+
+/* === this are classes that will be added with a function === */
+
+.accordion-copy--open {
+  visibility: visible;
+  max-height: 300px;
+  padding: 1rem 1.5rem 7rem 1.5rem;
+}
+
+.accordion-copy--close {
+  visibility: visible;
+  max-height: 0;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+
+/* =====  Story button and slide ======  */
+.story-slide{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  text-align: left;
+  padding: 0.5em 0 1em 0;
+}
+
+
+.story-slide-trigger{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  position: relative;
+  font-size: inherit;
+  background-color: whitesmoke;
+  color: #1f1f1f;
+  border-top: 0.5rem solid #08415C;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-left: transparent;
+  transform: rotate(90deg);
+  padding: 1em 0.75em 1em 0.75em;
+}
+.story-slide-trigger:hover{
+  background: rgb(209, 209, 209);
+}
+.story-slide-trigger::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 5px);
+  width: 0;
+  height: 0;
+  border-top: transparent;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.5s;
+  background: whitesmoke;
+}
+
+
+/* ==== Filter Button and Slide ==== */
+.filter-slide{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 0.5em 0 1em 0;
+  text-align: center;
+}
+.filter-slide-trigger{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  position: relative;
+  font-size: 1em;
+  background-color: whitesmoke;
+  color: #1f1f1f;
+  border-top: 0.5rem solid #08415C;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-left: transparent;
+  transform: rotate(90deg);
+  padding: 1em 0.75em 1em 0.75em;
+}
+.filter-slide-trigger:hover{
+  background: rgb(209, 209, 209);
+}
+.filter-slide-trigger::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 5px);
+  width: 0;
+  height: 0;
+  border-top: transparent;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.5s;
+  background: whitesmoke;
+}
+
+
+
+
+/* === this is for vertical open/close Button ==== */
+
+.accordion-vert--open {
+  visibility: visible;
+  margin-left: 0;
+  transition: visibility 0.7s ease,
+  margin-left 0.5s ease;
+}
+.accordion-vert--closed {
+  visibility: hidden;
+  border-bottom: "transparent";
+  margin-left: -375px;
+  transition: visibility 0.7s ease,
+  margin-left: 1s ease;
+}
+
+.accordion-vert{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 0.5em 0 1em 0;
+  position: relative;
+  margin-right: 0;
+  transition: 0.5s ease;
+}
+
+
+/* === for button container class change ===*/
+.side-bar--closed{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 370px;
+  height: 375px;
+  background-color: transparent;
+  border-right: transparent;
+  border-bottom: transparent;
+  padding: 0;
+  color: #1f1f1f;
+  transition: 0.7s ease;
+}
+
+
+#over_map_side2--closed {
+  position: absolute; 
+  background-color: transparent;
+  top: 10.5%;
+  left: 5rem;
+  z-index: 101;
+  width: 0;
+}
+
+.buttons-side-bar-col--closed{
+  flex-direction: column;
+  transition: 0.7s ease;
+  display: flex;
+}
+
+.accordion-vert-trigger{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  position: relative;
+  font-size: 1em;
+  background-color: whitesmoke;
+  color: #1f1f1f;
+  border-top: 0.5rem solid #FFE74C;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-left: transparent;
+  transform: rotate(90deg);
+  margin-top: -20px;
+  padding: 1.25rem 2.5rem 1.25rem 2.5rem;
+}
+.accordion-vert-trigger:hover{
+  background: rgb(209, 209, 209);
+}
+.accordion-vert-trigger::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 5px);
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid #FFE74C;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.5s;
+  background: whitesmoke;
+}
+
+.accordion-vert-trigger[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+  margin-left: 500px;
+  margin-top: -20px;
+}
+
+
+/* === this is for vertical FILTERS  === */
+
+.accordion-vert-filters--open {
+  visibility: visible;
+}
+
+.accordion-vert-filters{
+  font-style: italic;
+  padding: 0;
+  position: relative;
+}
+
+
+
+.accordion-vert-filters-trigger{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  position: relative;
+  font-size: 1em;
+  background-color: whitesmoke;
+  color: #1f1f1f;
+  border-top: 0.5rem solid #A10000;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-left: transparent;
+  transform: rotate(90deg);
+  padding: 1rem 1.5rem 1rem 1.5rem;
+}
+.accordion-vert-filters-trigger:hover{
+  background: rgb(209, 209, 209);
+}
+.accordion-vert-filters-trigger::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 5px);
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid #FFE74C;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.5s;
+  background: whitesmoke;
+}
+
+.accordion-vert-filters-trigger[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+  margin-left: 100px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  /*spinning the buttons around*/
+  .side-bar--closed{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 340px;
+    height: 290px;
+    background-color: transparent;
+    border-right: transparent;
+    border-bottom: transparent;
+    padding: 0;
+    color: #1f1f1f;
+    transition: 0.7s ease;
+
+  }
+  .buttons-side-bar-col--closed {
+    flex-direction: row;
+    display: flex;
+    position: absolute;
+    top: 132px;
+    left: -94px;
+    transform: rotate(90deg);
+    transition: 1s ease-in-out;
+
+  }
+  .accordion-vert--closed {
+    margin-left: -500px;
+    margin-top: 20px;
+    visibility: hidden;
+    border-bottom: "transparent";
+    transition: 
+      margin-top 1.5s ease, 
+      margin-left 2s ease, 
+      visibility 0.5s 1s ease;
+  }
+  #over_map_side2--closed {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 101;
+    width: 0;
+  }
+
+  .story-slide-trigger{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 105%;
+    position: relative;
+    font-size: 1em;
+    background-color: whitesmoke;
+    color: #1f1f1f;
+    border-top: 0.5rem solid #08415C;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: transparent;
+    transform: rotate(0deg);
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    height: 104%;
+  }
+
+  .filter-slide-trigger{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 105%;
+    position: relative;
+    font-size: 1em;
+    background-color: whitesmoke;
+    color: #1f1f1f;
+    border-top: 0.5rem solid #A10000;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: transparent;
+    transform: rotate(0deg);
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    height: 104%;
+  }
+
+  .accordion-vert-trigger{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 105%;
+    position: relative;
+    font-size: 1em;
+    background-color: whitesmoke;
+    color: #1f1f1f;
+    border-top: 0.5rem solid #FFE74C;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: transparent;
+    transform: rotate(0deg);
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    height: 104%;
+  }
+  .accordion-vert{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0.5em 0 1em 0;
+    position: relative;
+    margin-top:100px;
+    transition: 0.5s ease;
+    margin-right: 0;
+  }
+  .story-slide{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0.5em 0 1em 0;
+    position: relative;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .filter-slide{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0.5em 0 1em 0;
+    position: relative;
+    margin-top:0 ;
+    margin-right: 0;
+  }
+
+}
+
+@media screen and (max-height: 500px) {
+
+  /*spinning the buttons around*/
+  .side-bar--closed{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 340px;
+    height: 290px;
+    background-color: transparent;
+    border-right: transparent;
+    border-bottom: transparent;
+    padding: 0;
+    color: #1f1f1f;
+    transition: 0.7s ease;
+
+  }
+  .buttons-side-bar-col--closed {
+    flex-direction: row;
+    display: flex;
+    position: absolute;
+    top: 132px;
+    left: -299px;
+    transform: rotate(90deg);
+    transition: 1s ease-in-out;
+
+  }
+  .accordion-vert--closed {
+    margin-left: -500px;
+    margin-top: 20px;
+    visibility: hidden;
+    border-bottom: "transparent";
+    transition: 
+      margin-top 1.5s ease, 
+      margin-left 2s ease, 
+      visibility 0.5s 1s ease;
+  }
+  #over_map_side2--closed {
+    position: absolute; 
+    background-color: transparent;
+    top: 0;
+    left: 214px;
+    z-index: 101;
+    width: 0;
+  }
+  .story-slide{
+    font-style: italic;
+    padding: 0;
+    position: relative;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  .filter-slide{
+    font-style: italic;
+    padding: 0;
+    position: relative;
+    margin-right: 0;
+    margin-top:0 ;
+  }  
+
+  .story-slide-trigger{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    position: relative;
+    font-size: inherit;
+    background-color: whitesmoke;
+    color: #1f1f1f;
+    border-top: 0.5rem solid #08415C;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: transparent;
+    transform: rotate(0deg);
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+
+  .filter-slide-trigger{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    position: relative;
+    font-size: inherit;
+    background-color: whitesmoke;
+    color: #1f1f1f;
+    border-top: 0.5rem solid #A10000;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: transparent;
+    transform: rotate(0deg);
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+
+  .accordion-vert-trigger{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    position: relative;
+    font-size: inherit;
+    background-color: whitesmoke;
+    color: #1f1f1f;
+    border-top: 0.5rem solid #FFE74C;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: transparent;
+    transform: rotate(0deg);
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+  .accordion-vert{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0;
+    position: relative;
+    margin-top:100px;
+    transition: 0.5s ease;
+  }
+  .story-slide{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0;
+    position: relative;
+    margin-top: 0;
+  }
+  .filter-slide{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0;
+    position: relative;
+    margin-top:0 ;
+  }
+
+}
