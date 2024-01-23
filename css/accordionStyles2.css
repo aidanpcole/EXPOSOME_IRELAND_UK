@@ -1,4 +1,4 @@
-/*Trying to Build a Foldable Table in Vanilla JS*/
+uild a Foldable Table in Vanilla JS*/
 /*start with accordion, item?, and heading, and button*/
 
 .accordion {
@@ -179,7 +179,7 @@
   border-bottom: "transparent";
   margin-left: -375px;
   transition: visibility 0.7s ease,
-  margin-left: 1s ease;
+  margin-left 1s ease;
 }
 
 .accordion-vert{
@@ -189,6 +189,7 @@
   padding: 0.5em 0 1em 0;
   position: relative;
   margin-right: 0;
+  margin-top:0;
   transition: 0.5s ease;
 }
 
@@ -197,8 +198,8 @@
 .side-bar--closed{
   display: flex;
   flex-direction: row-reverse;
-  width: 370px;
-  height: 375px;
+  width: 340px;
+  height: 290px;
   background-color: transparent;
   border-right: transparent;
   border-bottom: transparent;
@@ -211,7 +212,7 @@
 #over_map_side2--closed {
   position: absolute; 
   background-color: transparent;
-  top: 10.5%;
+  top: 10%;
   left: 5rem;
   z-index: 101;
   width: 0;
